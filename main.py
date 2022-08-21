@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
 now_visitors = 1
@@ -16,10 +16,16 @@ def upload_scode():
 @app.route('/post', methods=['GET','POST'])
 def post():
     if request.method == 'POST':
-        value = request.form['thecode']
-        value = str(value)
-        print(value)
-    return render_template('post.html', value=value)
+        the_code = request.form['thecode']
+        the_code = str(the_code)
+
+        code_name = request.form['codename']
+        code_name = str(code_name)
+        
+        if the_code == 'no_code' or code_name == '':
+            return redirect('/upload')
+        else:
+            return render_template('post.html', value=the_code) # 이 코드 말고 다른것으로 고쳐야됨 (전체 스코드 목록 페이지라던지)
     
 if __name__ == '__main__':
     app.run()

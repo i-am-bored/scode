@@ -1,1 +1,0 @@
-https://replit.com/ 에서 flask 사용시 https://(프로젝트명).(유저명).repl.co 으로 접속 가능

@@ -138,22 +138,27 @@
         }
         .submit {
             background-Color: #0cbb1b;  
-            font: 12px 굴림;      
+            font: 13px 굴림;      
             font-weight: bold;
+        }
+
+        .input {
+            width: 110%;
         }
         
     </style>
 </head>
 <body>
-    <body style="overflow-x: hidden"></body>
-    <body style="overflow-y: hidden"></body>
+    <body style="overflow-x: hidden; overflow-y: hidden"></body>
     <h1>Scode</h1>
-    <h3>즉시 만들고 공유하세요</h3>
+    <h3>The place you can find small but strong pieces of code</h3>
     <br><br>
     <form action="\post" method="post" class="input-form">
+        <input type="text" name="codename" size="106" placeholder="여기에 코드 제목을 작성하세요">
+        <br><br>
         <textarea type="text" name='thecode' value="no_code" style="border: 2px solid gray" class="input-text" placeholder="여기에 코드를 작성하세요"></textarea>
         <br><br><br>
-        <input type="submit" value="저장하기" class="submit" style="WIDTH: 70pt; HEIGHT: 30pt;">
+        <input type="submit" value="게시" class="submit" style="WIDTH: 70pt; HEIGHT: 30pt;">
     </form>
 </body>
 </html>
