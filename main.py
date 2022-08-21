@@ -11,7 +11,7 @@ def mainpage():
 
 @app.route('/upload', methods=['GET','POST'])
 def upload_scode():
-    return render_template('add_scode.html')\
+    return render_template('add_scode.html')
 
 @app.route('/post', methods=['GET','POST'])
 def post():
